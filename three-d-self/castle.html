@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>中世纪城堡</title>
+  <script src="libs/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+
+    <a-sky color="#ffd6a5"></a-sky>
+
+    <a-plane
+      position="0 0 0" rotation="-90 0 0"
+      width="40" height="40" color="#6ab150"
+      material="repeat: 4 4">
+    </a-plane>
+
+    <a-torus
+      position="0 0.05 0" rotation="-90 0 0"
+      radius="5.2" radius-tubular="0.15" segments-tubular="32" segments-radial="48"
+      color="#4e9a4a">
+    </a-torus>
+
+    <a-entity id="castle" position="0 0 0">
+
+      <a-box position="0 1.5 0" width="4" height="3" depth="4"
+             color="#9e9e9e" material="roughness: 0.9; metalness: 0"></a-box>
+
+      <a-box position="1.9 3.4 -1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="1.9 3.4 0" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="1.9 3.4 1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="-1.9 3.4 -1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="-1.9 3.4 0" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="-1.9 3.4 1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="0 3.4 -1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+      <a-box position="0 3.4 1.9" width="0.4" height="0.5" depth="0.4" color="#7d7d7d"></a-box>
+
+      <a-box position="0 1 2.05" width="1.2" height="2" depth="0.1" color="#3e2723"></a-box>
+      <a-box position="0 0.4 2.05" width="1.6" height="0.8" depth="0.15" color="#5d4037"
+             animation="property: position; to: 0 2.6 2.05; dir: alternate; dur: 2500; loop: true; easing: easeInOutSine">
+      </a-box>
+
+      <a-entity position="2.6 0 2.6">
+        <a-cylinder position="0 2 0" radius="0.55" height="4" color="#bcaaa4" segments-radial="16"></a-cylinder>
+        <a-cone position="0 4.6 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#c62828" segments-radial="16"></a-cone>
+        <a-cylinder position="0 5.4 0" radius="0.04" height="0.8" color="#424242"></a-cylinder>
+        <a-box position="0.3 5.65 0" width="0.6" height="0.4" depth="0.03" color="#c62828"
+               animation="property: position; to: 0.42 5.7 0; dir: alternate; dur: 700; loop: true">
+        </a-box>
+      </a-entity>
+
+      <a-entity position="-2.6 0 2.6">
+        <a-cylinder position="0 2 0" radius="0.55" height="4" color="#bcaaa4" segments-radial="16"></a-cylinder>
+        <a-cone position="0 4.6 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#c62828" segments-radial="16"></a-cone>
+        <a-cylinder position="0 5.4 0" radius="0.04" height="0.8" color="#424242"></a-cylinder>
+        <a-box position="0.3 5.65 0" width="0.6" height="0.4" depth="0.03" color="#c62828"
+               animation="property: position; to: 0.42 5.7 0; dir: alternate; dur: 700; delay: 200; loop: true">
+        </a-box>
+      </a-entity>
+
+      <a-entity position="2.6 0 -2.6">
+        <a-cylinder position="0 2 0" radius="0.55" height="4" color="#bcaaa4" segments-radial="16"></a-cylinder>
+        <a-cone position="0 4.6 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#c62828" segments-radial="16"></a-cone>
+      </a-entity>
+
+      <a-entity position="-2.6 0 -2.6">
+        <a-cylinder position="0 2 0" radius="0.55" height="4" color="#bcaaa4" segments-radial="16"></a-cylinder>
+        <a-cone position="0 4.6 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#c62828" segments-radial="16"></a-cone>
+      </a-entity>
+
+      <a-cylinder position="0 4.6 0" radius="0.18" height="1.4" color="#5d4037" segments-radial="8"></a-cylinder>
+      <a-sphere position="0 5.5 0" radius="0.25" color="#424242"
+                animation="property: position; to: 0 6.4 0; dir: alternate; dur: 1800; loop: true; easing: easeInOutSine">
+      </a-sphere>
+      <a-sphere position="0 5.5 0" radius="0.18" color="#424242"
+                animation="property: position; to: 0 6.4 0; dir: alternate; dur: 1800; delay: 300; loop: true; easing: easeInOutSine">
+      </a-sphere>
+      <a-sphere position="0 5.5 0" radius="0.13" color="#424242"
+                animation="property: position; to: 0 6.4 0; dir: alternate; dur: 1800; delay: 600; loop: true; easing: easeInOutSine">
+      </a-sphere>
+
+    </a-entity>
+
+    <a-light type="ambient" color="#fff3e0" intensity="0.6"></a-light>
+    <a-light type="directional" position="6 10 4" color="#ffe0b2" intensity="0.9"></a-light>
+    <a-light type="point" position="0 3 2.4" color="#ffab40" intensity="0.5" distance="6"></a-light>
+
+    <a-camera position="8 4 9" look-controls="reverseMouseDrag: false" wasd-controls="acceleration: 30">
+      <a-entity cursor="raycaster: origin: mouse"></a-entity>
+    </a-camera>
+
+  </a-scene>
+</body>
+</html>
